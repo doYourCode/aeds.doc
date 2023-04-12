@@ -111,7 +111,7 @@ enableRobotsTXT = true
   # (Optional, default 'title') Configure how to sort file-tree menu entries. Possible options are 'title', 'linktitle',
   # 'date', 'publishdate', 'expirydate' or 'lastmod'. Every option can be used with a reverse modifier as well
   # e.g. 'title_reverse'.
-  geekdocFileTreeSortBy = "publishdate"
+  geekdocFileTreeSortBy = "title"
 
   # (Optional, default none) Adds a "Content licensed under <license>" line to the footer.
   # Could be used if you want to define a default license for your content.

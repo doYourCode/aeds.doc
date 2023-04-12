@@ -1,5 +1,5 @@
 baseURL = "https://doyourcode.github.io/aeds.doc"
-title = "Documentação e referências: algoritmos_e_estruturas_de_dados"
+title = "algoritmos_e_estruturas_de_dados"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
@@ -32,7 +32,7 @@ enableRobotsTXT = true
 
   # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
   # relative to your 'static/' folder.
-  geekdocLogo = "logo.png"
+  geekdocLogo = "IFNMG.png"
 
   # (Optional, default false) Render menu from data file in 'data/menu/main.yaml'.
   # See also https://geekdocs.de/usage/menus/#bundle-menu.

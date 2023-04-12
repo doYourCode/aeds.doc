@@ -36,7 +36,7 @@ enableRobotsTXT = true
 
   # (Optional, default false) Render menu from data file in 'data/menu/main.yaml'.
   # See also https://geekdocs.de/usage/menus/#bundle-menu.
-  geekdocMenuBundle = true
+  geekdocMenuBundle = false
 
   # (Optional, default false) Collapse all menu entries, can not be overwritten
   # per page if enabled. Can be enabled per page via 'geekdocCollapseSection'.
@@ -111,7 +111,7 @@ enableRobotsTXT = true
   # (Optional, default 'title') Configure how to sort file-tree menu entries. Possible options are 'title', 'linktitle',
   # 'date', 'publishdate', 'expirydate' or 'lastmod'. Every option can be used with a reverse modifier as well
   # e.g. 'title_reverse'.
-  geekdocFileTreeSortBy = "title"
+  geekdocFileTreeSortBy = "publishdate"
 
   # (Optional, default none) Adds a "Content licensed under <license>" line to the footer.
   # Could be used if you want to define a default license for your content.

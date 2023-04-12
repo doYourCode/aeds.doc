@@ -1,5 +1,5 @@
 baseURL = "https://doyourcode.github.io/aeds.doc"
-title = "Geekdocs"
+title = "Documentação e referências: algoritmos_e_estruturas_de_dados"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false

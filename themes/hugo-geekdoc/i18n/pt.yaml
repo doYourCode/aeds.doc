@@ -12,8 +12,8 @@ error_page_title: Perdido? Não se preocupe
 error_message_title: Perdido?
 error_message_code: Erro 404
 error_message_text: >
-  Seems like what you are looking for can't be found. Don't worry, we can
-  bring you back to the <a class="gdoc-error__link" href="{{ . }}">homepage</a>.
+  Parece que o conteúdo que você busca não pôde ser encontrado. Não se preocupe, nós podemos
+  encaminhaá-lo de volta à nossa <a class="gdoc-error__link" href="{{ . }}">página inicial</a>.
 
 button_toggle_dark: Modo escuro
 button_nav_open: Abrir navegação
@@ -35,12 +35,11 @@ posts_count:
 posts_tagged_with: All posts tagged with '{{ . }}'
 
 footer_build_with: >
-  Built with <a href="https://gohugo.io/" class="gdoc-footer__link">Hugo</a> and
-  <svg class="gdoc-icon gdoc_heart"><use xlink:href="#gdoc_heart"></use></svg>
+  Built with <a href="https://gohugo.io/" class="gdoc-footer__link">Hugo</a>
 footer_legal_notice: Legal Notice
-footer_privacy_policy: Privacy Policy
+footer_privacy_policy: Política de privacidade
 footer_content_license_prefix: >
-  Content licensed under
+  Conteúdo licenciado com
 
 language_switch_no_tranlation_prefix: "Página não traduzida:"
 

@@ -1,5 +1,5 @@
 ---
-title: "Samples of Algorithms and Data Structure in Python"
+title: "Samples of algorithms and data structure in Python"
 date: 2023-04-12T01:00:36-03:00
 draft: false
 ---

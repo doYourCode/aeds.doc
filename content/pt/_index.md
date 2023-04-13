@@ -13,7 +13,7 @@ Inicialmente, todos os exemplos são desenvolvidos em Python para facilitar o ap
 
 É importante ressaltar que os trechos de software disponíveis no nosso repositório priorizam a clareza de leitura e entendimento, com o objetivo principal de apoiar o processo de ensino e aprendizagem. Por isso, em algumas situações, a legibilidade pode ter sido priorizada em detrimento da eficiência ou do uso de comentários, que em outros contextos seriam considerados exagerados.
 
-<h3>Conteúdo</h3>
+## Conteúdo
 
 Atualmente o repositório contém exemplos de implementação das seguintes estruturas de dados:
 
@@ -39,7 +39,7 @@ Os seguintes exemplos de uso:
 - Ordenação de processamento em batch (first-in, first-out)
 - Ordenação de processamento em batch (Shortest-job-first)
 
-<h3>Planos futuros</h3>
+## Planos futuros
 
 Pretendemos incluir os seguintes conteúdos:
 
@@ -48,12 +48,12 @@ Pretendemos incluir os seguintes conteúdos:
 - Algoritmos de busca
 - Exemplos comuns de uso
 
-<h3>Principais contribuíntes</h3>
+## Principais contribuíntes
 
 - [Franck Allyson](https://github.com/franckallyson)
 - [Everton Sousa Oliveira](https://github.com/Evertonsousa3)
 
-<h3>Contribuições, comentários e sugestões</h3>
+## Contribuições, comentários e sugestões
 
 Sinta-se livre para contrbiuir com os nossos repositórios:
 - [algoritmos_e_estruturas_de_dados](https://github.com/doYourCode/algoritmos_e_estruturas_de_dados)

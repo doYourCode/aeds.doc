@@ -4,6 +4,7 @@ title: "Lista linear (alocação contígua)"
 date: 2023-04-12T01:00:36-03:00
 draft: false
 ---
+<!-- Marcação de hightlight de código conforme https://gohugo.io/content-management/syntax-highlighting/ -->
 
 A lista linear (também chamada de lista com alocação contígua) é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
 

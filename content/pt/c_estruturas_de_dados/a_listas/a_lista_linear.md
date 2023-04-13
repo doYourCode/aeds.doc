@@ -45,13 +45,13 @@ Além dessas operações básicas, outras operações mais avançadas podem ser 
 
 A lista é uma das estruturas de dados mais versáteis e amplamente utilizadas em Python, não sendo necessário implementá-la, pois já é uma parte fundamental da biblioteca padrão da linguagem. Para criar uma lista em Python, você pode usar colchetes ([]) e separar os elementos por vírgulas. Por exemplo:
 
-{{< highlight Python "linenos=table" >}}
+```Python {linenos=table}
 # Criando uma lista de números inteiros
 numeros = [1, 2, 3, 4, 5]
 
 # Criando uma lista de strings
 frutas = ['maçã', 'banana', 'laranja']
-{{< /highlight >}}
+```
 
 Uma das principais características das listas é que elas podem conter diferentes tipos de elementos, como números, strings, booleanos e até mesmo outras listas. Além disso, as listas em Python são indexadas, o que significa que você pode acessar elementos individuais pelo seu índice, começando por 0 para o primeiro elemento. Por exemplo:
 

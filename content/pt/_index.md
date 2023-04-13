@@ -48,7 +48,7 @@ Pretendemos incluir os seguintes conteúdos:
 - Algoritmos de busca
 - Exemplos comuns de uso
 
-## Principais contribuíntes
+## Principais contribuidores do projeto
 
 - [Franck Allyson](https://github.com/franckallyson)
 - [Everton Sousa Oliveira](https://github.com/Evertonsousa3)

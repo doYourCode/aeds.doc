@@ -42,7 +42,7 @@ A lista linear (também chamada de lista com alocação contígua) é uma estrut
 
 Além dessas operações básicas, outras operações mais avançadas podem ser implementadas em uma lista linear, como ordenação, concatenação, particionamento e inversão, dependendo dos requisitos específicos de cada aplicação.
 
-## Implementação e uso em python
+## Utilização da lista linear em python
 
 A lista é uma das estruturas de dados mais versáteis e amplamente utilizadas em Python, não sendo necessário implementá-la, pois já é uma parte fundamental da biblioteca padrão da linguagem. Para criar uma lista em Python, você pode usar colchetes ` [ ] ` e separar os elementos por vírgulas. Por exemplo:
 
@@ -101,7 +101,7 @@ Além disso, as listas em Python são mutáveis, o que significa que você pode 
 
 {{< tabs "ex_5" >}}
 {{< tab "Python" >}}
-```Python {linenos=table, linenostart=17}
+```Python {linenos=table, linenostart=16}
 # Modificando elementos em uma lista
 numeros[2] = 30  # Altera o valor do terceiro elemento para 30
 frutas.append('uva')  # Adiciona 'uva' ao final da lista de frutas
@@ -145,4 +145,15 @@ print(lista2)  # Saída: [1, 2, 3], pois lista2 é uma cópia independente de li
 {{< /tabs >}}
 {{< /tab >}}
 
-Em resumo, as listas são uma estrutura de dados versátil e poderosa em Python, que permite armazenar e manipular coleções de elementos de forma flexível. Elas suportam operações de indexação, fatiamento, e têm uma ampla variedade de métodos embutidos para realizar várias operações. É importante estar ciente da mutabilidade por referência e das possíveis mudanças no tamanho da lista ao fazer modificações. Com um bom entendimento das listas em Python, é possível realizar muitas tarefas de processamento de dados de forma eficiente e conveniente.
+Em resumo, as listas são estruturas de dados versáteis e poderosas em Python, que permitem armazenar e manipular coleções de elementos de forma flexível. Elas suportam operações de indexação, fatiamento, e têm uma ampla variedade de métodos para realizar operações comuns ao seu tipo. É importante estar ciente da mutabilidade por referência e das possíveis mudanças no tamanho da lista ao fazer modificações. Com um bom entendimento das listas, especialmente em Python, é possível realizar muitas tarefas de processamento de dados de forma conveniente sem abrir mão da eficiência.
+
+## Referências
+
+- <a href="https://blog.betrybe.com/python/python-list/" target="_blank">Betrybe - Python list: armazenando itens em uma única variável!</a>
+- <a href="https://www.devmedia.com.br/como-trabalhar-com-listas-em-python/37460" target="_blank">Devmedia - Como trabalhar com listas em Python</a>
+- <a href="https://python-reference.readthedocs.io/en/latest/docs/list/" target="_blank">Python Reference - List</a>
+- <a href="https://www.programiz.com/python-programming/list" target="_blank">Programiz - Python List</a>
+- <a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Python Docs - More on Lists</a>
+- <a href="https://www.w3schools.com/python/python_lists.asp" target="_blank">W3 Schools - Python List</a>
+- <a href="https://duckduckgo.com/?q=Use+a+Cabe%C3%A7a!+Python&ia=web" target="_blank">(Livro) Use a Cabeça! Python</a>
+- <a href="https://duckduckgo.com/?q=Python+Fluente%3A+Programa%C3%A7%C3%A3o+Clara%2C+Concisa+e+Eficaz" target="_blank">(Livro) Python Fluente: Programação Clara, Concisa e Eficaz</a>

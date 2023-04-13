@@ -9,35 +9,35 @@ A lista linear (também chamada de lista com alocação contígua) é uma estrut
 
 ## Usos comuns
 
-- Armazenamento de dados sequenciais: A lista linear é útil quando se deseja armazenar e acessar elementos em uma sequência específica, como uma lista de itens em uma compra online, registros em um banco de dados ou pixels em uma imagem. É importante frisar que esse tipo de lista desepenha melhor quando o número de elementos já é conhecido no momento da alocação.
+- **Armazenamento de dados sequenciais:** A lista linear é útil quando se deseja armazenar e acessar elementos em uma sequência específica, como uma lista de itens em uma compra online, registros em um banco de dados ou pixels em uma imagem. É importante frisar que esse tipo de lista desepenha melhor quando o número de elementos já é conhecido no momento da alocação.
 
-- Implementação de outras estruturas de dados: É possível implementar, por exemplo, pilhas (LIFO) e filas (FIFO) usando listas lineares com alocação contígua. Nesse caso, o que diferenciará essas estruturas da lista linear serão as operações específicas que cada uma desempenha.
+- **Implementação de outras estruturas de dados:** É possível implementar, por exemplo, pilhas (LIFO) e filas (FIFO) usando listas lineares com alocação contígua. Nesse caso, o que diferenciará essas estruturas da lista linear serão as operações específicas que cada uma desempenha.
 
 ## Vantagens
 
-- Acesso direto aos elementos: Como cada elemento é armazenado em uma posição de memória contígua e possui um endereço único, o acesso aos elementos é direto e eficiente, com tempo de acesso constante, O(1).
+- **Acesso direto aos elementos:** Como cada elemento é armazenado em uma posição de memória contígua e possui um endereço único, o acesso aos elementos é direto e eficiente, com tempo de acesso constante, O(1).
 
-- Operações de busca e recuperação rápidas: A busca e recuperação de elementos em uma lista linear são geralmente rápidas, especialmente quando se conhece a posição do elemento na lista, em outros casos, pode-se também  implementador algoritmos como a busca binária.
+- **Operações de busca e recuperação rápidas:** A busca e recuperação de elementos em uma lista linear são geralmente rápidas, especialmente quando se conhece a posição do elemento na lista, em outros casos, pode-se também  implementador algoritmos como a busca binária.
 
-- Implementação eficiente de pilhas e filas: Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido.
+- **Implementação eficiente de pilhas e filas:** Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido.
 
 ## Desvantagens
 
-- Tamanho fixo: A alocação contígua de elementos em uma lista linear pode levar a um tamanho fixo da lista, o que pode ser inconveniente quando há a necessidade de variar dinamicamente o número de elementos. Nesses casos seria necessária a realocação de memória e ajustes na estrutura da lista, o que pode ser custoso em termos de tempo e recursos.
+- **Tamanho fixo:** A alocação contígua de elementos em uma lista linear pode levar a um tamanho fixo da lista, o que pode ser inconveniente quando há a necessidade de variar dinamicamente o número de elementos. Nesses casos seria necessária a realocação de memória e ajustes na estrutura da lista, o que pode ser custoso em termos de tempo e recursos.
 
-- Inserção e remoção ineficientes: A inserção e remoção de elementos em uma lista linear podem ser ineficientes em termos de tempo, especialmente quando é necessário inserir ou remover elementos no meio da lista. Isso pode exigir o deslocamento de elementos subsequentes, resultando em tempo de execução proporcional ao tamanho da lista, O(n).
+- **Inserção e remoção ineficientes:** A inserção e remoção de elementos em uma lista linear podem ser ineficientes em termos de tempo, especialmente quando é necessário inserir ou remover elementos no meio da lista. Isso pode exigir o deslocamento de elementos subsequentes, resultando em tempo de execução proporcional ao tamanho da lista, O(n).
 
-- Desperdício de memória: Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar em uso ineficiente da memória.
+- **Desperdício de memória:** Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar em uso ineficiente da memória.
 
 ## Operações
 
-- Inserção: Adicionar um novo elemento à lista em uma posição específica, como no início ou em uma posição intermediária pode exigir o deslocamento de elementos subsequentes para acomodar o novo elemento, o que pode afetar o desempenho da operação. Inserções no final da lista geralmente não impactam o desempenho, a não ser que o número máximo de elementos tenha sido atingido, nesse caso a inserção exigirá uma realocação da lista que impactará o desempenho da operação.
+- **Inserção:** Adicionar um novo elemento à lista em uma posição específica, como no início ou em uma posição intermediária pode exigir o deslocamento de elementos subsequentes para acomodar o novo elemento, o que pode afetar o desempenho da operação. Inserções no final da lista geralmente não impactam o desempenho, a não ser que o número máximo de elementos tenha sido atingido, nesse caso a inserção exigirá uma realocação da lista que impactará o desempenho da operação.
 
-- Remoção: A exclusão de um elemento específico da lista pode exigir o deslocamento de elementos subsequentes para preencher o espaço vago e manter a continuidade da lista, o que também pode afetar o desempenho da operação.
+- **Remoção:** A exclusão de um elemento específico da lista pode exigir o deslocamento de elementos subsequentes para preencher o espaço vago e manter a continuidade da lista, o que também pode afetar o desempenho da operação.
 
-- Busca: Localizar a posição de um elemento específico na lista com base em seu valor pode ser realizada de forma sequencial, percorrendo a lista elemento por elemento, ou de forma otimizada, como por meio de uma busca binária, dependendo da ordenação dos elementos na lista.
+- **Busca:** Localizar a posição de um elemento específico na lista com base em seu valor pode ser realizada de forma sequencial, percorrendo a lista elemento por elemento, ou de forma otimizada, como por meio de uma busca binária, dependendo da ordenação dos elementos na lista.
 
-- Acesso: Recuperar o valor de um elemento em uma posição específica da lista com base em seu índice é uma operação direta e eficiente, entretanto recuperar um valor com base em algum outro dado pode exigir também uma operação de busca.
+- **Acesso:** Recuperar o valor de um elemento em uma posição específica da lista com base em seu índice é uma operação direta e eficiente, entretanto recuperar um valor com base em algum outro dado pode exigir também uma operação de busca.
 
 Além dessas operações básicas, outras operações mais avançadas podem ser implementadas em uma lista linear, como ordenação, concatenação, particionamento e inversão, dependendo dos requisitos específicos de cada aplicação.
 

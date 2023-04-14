@@ -41,10 +41,6 @@ defaultContentLanguage = "pt"
 [taxonomies]
    tag = "tags"
 
-[outputFormats]
-  [outputFormats.HTML]
-    isPlainText = true
-
 
 [params]
   # (Optional, default 6) Set how many table of contents levels to be showed on page.

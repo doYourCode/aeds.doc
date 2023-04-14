@@ -30,7 +30,7 @@ A lista linear (também chamada de lista com alocação contígua) é uma estrut
 
 - **Desperdício de memória:** Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar em uso ineficiente da memória.
 
-## Operações
+## Operações típicas
 
 - **Inserção:** Adicionar um novo elemento à lista em uma posição específica, como no início ou em uma posição intermediária pode exigir o deslocamento de elementos subsequentes para acomodar o novo elemento, o que pode afetar o desempenho da operação. Inserções no final da lista geralmente não impactam o desempenho, a não ser que o número máximo de elementos tenha sido atingido, nesse caso a inserção exigirá uma realocação da lista que impactará o desempenho da operação.
 
@@ -48,52 +48,56 @@ A lista é uma das estruturas de dados mais versáteis e amplamente utilizadas e
 
 {{< tabs "ex_1" >}}
 {{< tab "Python" >}}
-```Python {linenos=table}
+```Python
 # Criando uma lista de números inteiros
 numeros = [1, 2, 3, 4, 5]
 
 # Criando uma lista de strings
 frutas = ['maçã', 'banana', 'laranja']
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
+
 
 Uma característica importante das listas é a capacidade de conter diferentes tipos de elementos, como números, strings, booleanos e até mesmo outras listas. Além disso, as listas em Python são indexadas, o que significa que você pode acessar elementos individuais pelo seu índice, começando por 0 para o primeiro elemento. Por exemplo:
 
 {{< tabs "ex_2" >}}
 {{< tab "Python" >}}
-```Python {linenos=table, linenostart=6}
+```Python {linenostart=6}
 # Acessando elementos em uma lista pelo índice
 print(numeros[0])  # Saída: 1
 print(frutas[1])    # Saída: 'banana'
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
+
 
 As listas da biblioteca padrão de Python também suportam índices negativos, o que permite acessar elementos a partir do final da lista. O índice -1 representa o último elemento, -2 representa o penúltimo e assim por diante. Por exemplo:
 
 {{< tabs "ex_3" >}}
 {{< tab "Python" >}}
-```Python {linenos=table, linenostart=9}
+```Python {linenostart=9}
 # Acessando elementos em uma lista com índices negativos
 print(numeros[-1])  # Saída: 5
 print(frutas[-2])    # Saída: 'banana'
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
+
 
 Outra operação comum em listas é a fatiamento (slicing), que permite extrair uma parte específica da lista com base em um intervalo de índices. O fatiamento em Python é feito usando colchetes e dois pontos ` : ` para separar os índices inicial, final e o passo. Por exemplo:
 
 {{< tabs "ex_4" >}}
 {{< tab "Python" >}}
-```Python {linenos=table, linenostart=12}
+```Python {linenostart=12}
 # Fatiamento de listas
 print(numeros[1:4])    # Saída: [2, 3, 4]
 print(frutas[:2])      # Saída: ['maçã', 'banana']
 print(numeros[::2])    # Saída: [1, 3, 5]
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
+
 
 As listas em Python também possuem uma ampla variedade de métodos embutidos que podem ser usados para realizar várias operações, como adicionar elementos com a função `append()`, remover elementos com `remove()`, contar o número de ocorrências de um elemento com `count()`, ordenar os elementos com `sort()` e inverter a ordem dos elementos com `reverse()`, entre outros.
 
@@ -101,21 +105,20 @@ Além disso, as listas em Python são mutáveis, o que significa que você pode 
 
 {{< tabs "ex_5" >}}
 {{< tab "Python" >}}
-```Python {linenos=table, linenostart=16}
+```Python {linenostart=16}
 # Modificando elementos em uma lista
 numeros[2] = 30  # Altera o valor do terceiro elemento para 30
 frutas.append('uva')  # Adiciona 'uva' ao final da lista de frutas
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
 
-Porém, é importante notar que, ao fazer alterações em uma lista, o seu tamanho pode mudar, o que pode afetar outros índices e elementos subsequentes. Portanto, é necessário ter cuidado ao modificar uma lista para evitar erros de índice ou perda de dados.
 
-Outra característica importante das listas é que elas são mutáveis por referência. Isso significa que, se uma lista for atribuída a uma variável e, em seguida, essa variável for atribuída a outra variável, ambas as variáveis estarão referenciando a mesma lista na memória. Portanto, qualquer modificação feita em uma variável afetará todas as outras variáveis que referenciam a mesma lista. Por exemplo:
+Ainda com relação à mutabilidade, uma característica importante das listas é que elas são mutáveis por referência. Isso significa que, se uma lista for atribuída a uma variável e, em seguida, essa variável for atribuída a outra variável, ambas as variáveis estarão referenciando a mesma lista na memória. Portanto, qualquer modificação feita em uma variável afetará todas as outras variáveis que referenciam a mesma lista. Por exemplo:
 
 {{< tabs "ex_6" >}}
 {{< tab "Python" >}}
-```Python {linenos=table}
+```Python
 # Mutabilidade por referência em listas
 lista1 = [1, 2, 3]
 lista2 = lista1  # lista2 faz referência à mesma lista que lista1
@@ -125,14 +128,15 @@ lista1[0] = 10  # Modifica o primeiro elemento de lista1
 print(lista1)  # Saída: [10, 2, 3]
 print(lista2)  # Saída: [10, 2, 3], pois lista2 faz referência à mesma lista que lista1
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
+
 
 Para criar uma cópia independente de uma lista, é necessário usar o método `copy()` ou a função `list()` para criar uma nova lista com os mesmos elementos. Por exemplo:
 
 {{< tabs "ex_7" >}}
 {{< tab "Python" >}}
-```Python {linenos=table}
+```Python
 # Criando uma cópia independente de uma lista
 lista1 = [1, 2, 3]
 lista2 = lista1.copy()  # Cria uma nova lista (cópia) com os mesmos elementos de lista1
@@ -142,12 +146,21 @@ lista1[0] = 10  # Modifica o primeiro elemento de lista1
 print(lista1)  # Saída: [10, 2, 3]
 print(lista2)  # Saída: [1, 2, 3], pois lista2 é uma cópia independente de lista1
 ```
-{{< /tabs >}}
 {{< /tab >}}
+{{< /tabs >}}
 
-Em resumo, as listas são estruturas de dados versáteis e poderosas em Python, que permitem armazenar e manipular coleções de elementos de forma flexível. Elas suportam operações de indexação, fatiamento, e têm uma ampla variedade de métodos para realizar operações comuns ao seu tipo. É importante estar ciente da mutabilidade por referência e das possíveis mudanças no tamanho da lista ao fazer modificações. Com um bom entendimento das listas, especialmente em Python, é possível realizar muitas tarefas de processamento de dados de forma conveniente sem abrir mão da eficiência.
+
+Em resumo, as listas são estruturas de dados versáteis e poderosas em Python, que permitem armazenar e manipular coleções de elementos de forma flexível. Elas suportam operações de indexação, fatiamento, e têm uma ampla variedade de métodos para realizar operações comuns ao seu tipo. É importante estar ciente da mutabilidade por referência e das possíveis mudanças no tamanho da lista ao fazer modificações. Com um bom entendimento das listas, especialmente em Python, é possível realizar muitas tarefas de processamento de dados de forma conveniente sem abrir mão da eficiência. Para mais informações confira a seção de referências.
 
 ## Referências
+
+#### Geral
+
+- <a href="https://duckduckgo.com/?q=Estruturas+de+dados+e+algoritmos+em+C%2B%2B+DROZDEK%2C+Adam" target="_blank">(Livro) Estruturas de dados e algoritmos em C++</a>
+- <a href="https://duckduckgo.com/?q=Estruturas+de+dados%3A+algoritmos%2C+an%C3%A1lise+da+complexidade+e+implementa%C3%A7%C3%B5es+em+Java+e+C%2FC%2B%2B&ia=web" target="_blank">(Livro) Estruturas de dados: algoritmos, análise da complexidade e implementações em Java e C/C++</a>
+- <a href="https://duckduckgo.com/?q=Introduction+to+Algorithms" target="_blank">(Livro) Introduction to Algorithms</a>
+
+#### Python
 
 - <a href="https://blog.betrybe.com/python/python-list/" target="_blank">Betrybe - Python list: armazenando itens em uma única variável!</a>
 - <a href="https://www.devmedia.com.br/como-trabalhar-com-listas-em-python/37460" target="_blank">Devmedia - Como trabalhar com listas em Python</a>

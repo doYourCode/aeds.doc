@@ -1,6 +1,6 @@
 
-baseURL = "https://doyourcode.github.io/aeds.doc"
-#baseURL = "//localhost"
+#baseURL = "https://doyourcode.github.io/aeds.doc"
+baseURL = "//localhost"
 
 title = "Algoritmos e Estruturas de Dados"
 theme = "hugo-geekdoc"
@@ -35,9 +35,16 @@ defaultContentLanguage = "pt"
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+    [markup.highlight]
+    lineNos = true
 
 [taxonomies]
    tag = "tags"
+
+[outputFormats]
+  [outputFormats.HTML]
+    isPlainText = true
+
 
 [params]
   # (Optional, default 6) Set how many table of contents levels to be showed on page.
@@ -81,7 +88,7 @@ defaultContentLanguage = "pt"
   # (Optional, default false) Display search results with the parent folder as prefix. This
   # option allows you to distinguish between files with the same name in different folders.
   # NOTE: This parameter only applies when 'geekdocSearch = true'.
-  geekdocSearchShowParent = true
+  geekdocSearchShowParent = false
 
   # (Optional, default none) Add a link to your Legal Notice page to the site footer.
   # It can be either a remote url or a local file path relative to your content directory.
@@ -92,10 +99,10 @@ defaultContentLanguage = "pt"
   # geekdocPrivacyPolicy = "/privacy"
 
   # (Optional, default true) Add an anchor link to headlines.
-  geekdocAnchor = true
+  geekdocAnchor = false
 
   # (Optional, default true) Copy anchor url to clipboard on click.
-  geekdocAnchorCopy = true
+  geekdocAnchorCopy = false
 
   # (Optional, default true) Enable or disable image lazy loading for images rendered
   # by the 'img' shortcode.

@@ -1,6 +1,6 @@
 
-#baseURL = "https://doyourcode.github.io/aeds.doc"
-baseURL = "//localhost"
+baseURL = "https://doyourcode.github.io/aeds.doc"
+#baseURL = "//localhost"
 
 title = "Algoritmos e Estruturas de Dados"
 theme = "hugo-geekdoc"
@@ -11,6 +11,8 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+
+customCSS = "/style.css"
 
 # Required if you want to render robots.txt template
 enableRobotsTXT = true
@@ -40,6 +42,7 @@ defaultContentLanguage = "pt"
 
 [taxonomies]
    tag = "tags"
+
 
 
 [params]
@@ -136,4 +139,6 @@ defaultContentLanguage = "pt"
   # [params.geekdocContentLicense]
   #  name = "CC BY-SA 4.0"
   #  link = "https://creativecommons.org/licenses/by-sa/4.0/"
+
+
 

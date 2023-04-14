@@ -6,21 +6,93 @@ draft: false
 ---
 <!-- Marcação de hightlight de código conforme https://gohugo.io/content-management/syntax-highlighting/ -->
 
-A lista linear (também chamada de lista com alocação contígua) é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
+<!-- Esse cabeçalho precisa ser em formato html para excluí-lo da TOC (TODO: encontrar solução melhor) -->
+<h2> Conteúdo </h2>
+{{< toc "format=html" >}}
 
-## Usos comuns
+A lista linear é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (ou seja, uma alocação contígua, como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
 
-- **Armazenamento de dados sequenciais:** A lista linear é útil quando se deseja armazenar e acessar elementos em uma sequência específica, como uma lista de itens em uma compra online, registros em um banco de dados ou pixels em uma imagem. É importante frisar que esse tipo de lista desepenha melhor quando o número de elementos já é conhecido no momento da alocação.
+Para exemplificar, imaginemos a seguinte situação, uma lista com as sete (7) frutas preferidas de alguém, nessa lista estão presentes maçã, pêra, abacaxi, melão, laranja, manga e mamão. Em python, para criar uma lista como essa, executamos o comando a seguir:
 
-- **Implementação de outras estruturas de dados:** É possível implementar, por exemplo, pilhas (LIFO) e filas (FIFO) usando listas lineares com alocação contígua. Nesse caso, o que diferenciará essas estruturas da lista linear serão as operações específicas que cada uma desempenha.
+{{< tabs "ex_0" >}}
+{{< tab "Python" >}}
+```python
+frutas_preferidas = ['maçã', 'pêra', 'abacaxi', 'melão', 'laranja', 'manga', 'mamão']
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+Internamente a memória do computador é organizada com sete endereços de memória que referenciam cada uma dessas frutas, que chamamos de índices, esses índices são contados a partir de zero (0) e portanto no endereço de índice 0 encontraremos a maçã, no endereço de índice 1 encontraremos a pêra e daí em diante, até encontrarmos o mamão no último endereço, de índice 6. Ilustrando essa organização temos a figura a seguir:
+
+```mermaid
+graph BT
+    subgraph frutas_preferidas
+        subgraph índice 0
+            maçã
+        end
+        subgraph índice 1
+            pêra
+        end
+        subgraph índice 2
+            abacaxi
+        end
+        subgraph índice 3
+            melão
+        end
+        subgraph índice 4
+            laranja
+        end
+        subgraph índice 5
+            manga
+        end
+        subgraph índice 6
+            mamão
+        end
+    end
+```
+
+É importante frisar que frutas_preferidas é composto por um bloco único na memória, endereçado pelo mesmo endereço do índice 0 e contendo nesse mesmo bloco todos os itens dos demais índices, não havendo separação ou espaço de memória entre esses itens. Essa é uma característica fundamental para compreender as vantagens e desvantagens de uma alocação contígua e em quais situações a empregamos.
 
 ## Vantagens
 
-- **Acesso direto aos elementos:** Como cada elemento é armazenado em uma posição de memória contígua e possui um endereço único, o acesso aos elementos é direto e eficiente, com tempo de acesso constante, O(1).
+- **Acesso direto aos elementos:** Como cada elemento é armazenado em uma posição de memória contígua e possui um endereço único, o acesso aos elementos é direto e eficiente, com tempo de acesso constante, ou seja, o acesso aos dados de uma lista através dos índices terá sempre complexidade O(1). Esse acesso pode ser feito como demonstrado:
 
-- **Operações de busca e recuperação rápidas:** A busca e recuperação de elementos em uma lista linear são geralmente rápidas, especialmente quando se conhece a posição do elemento na lista, em outros casos, pode-se também  implementador algoritmos como a busca binária.
+{{< tabs "ex_0-1" >}}
+{{< tab "Python" >}}
+```python {linenostart=2}
+# Escreve na tela o conteúdo referenciado pelo quarto endereço, ou seja, o índice 3
+print(frutas_preferidas[3])
 
-- **Implementação eficiente de pilhas e filas:** Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido.
+melão
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+- **Operações de busca e recuperação rápidas:** A busca e recuperação de elementos em uma lista linear são geralmente rápidas, como vimos anteriormente, especialmente quando se conhece a posição do elemento na lista. Caso a posição não seja conhecida, em listas de tamanho pequeno e médio pode-se realizar buscas lineares e em outros casos, pode-se também implementador algoritmos como a busca binária, desde que a lista esteja ordenada.
+
+Para melhor ilustrar, imagine que queiramos retornar o endereço do item "laranja", que não conhecemos. Nesse caso podemos utilizar a funções `index( )` ou `find( )`, ou até mesmo implementarmos uma busca nós mesmos.
+
+{{< tabs "ex_0-2" >}}
+{{< tab "Python" >}}
+```python{linenostart=6}
+# Escreve na tela o endereço do item "laranja" através das buscas embutidas de python e uma busca implementada pelo autor
+print(frutas_preferidas.index("laranja")
+
+print(frutas_preferidas.find("laranja")
+
+# Esse último método é mais flexível pois permite realizar buscas em objetos mais complexos, podendo utilizar seus campos como parâmetro de busca
+for i in range(len(frutas_preferidas)):
+  if frutas_preferidas[i] == "laranja":
+    print(i)
+
+4
+4
+4
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+- **Implementação eficiente de pilhas e filas:** Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido. Nas seções dessas estruturas de dados veremos sua implementação valendo-se da lista padrão do Python.
 
 ## Desvantagens
 
@@ -29,6 +101,12 @@ A lista linear (também chamada de lista com alocação contígua) é uma estrut
 - **Inserção e remoção ineficientes:** A inserção e remoção de elementos em uma lista linear podem ser ineficientes em termos de tempo, especialmente quando é necessário inserir ou remover elementos no meio da lista. Isso pode exigir o deslocamento de elementos subsequentes, resultando em tempo de execução proporcional ao tamanho da lista, O(n).
 
 - **Desperdício de memória:** Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar em uso ineficiente da memória.
+
+## Usos comuns
+
+- **Armazenamento de dados sequenciais:** A lista linear é útil quando se deseja armazenar e acessar elementos em uma sequência específica, como uma lista de itens em uma compra online, registros em um banco de dados ou pixels em uma imagem. É importante frisar que esse tipo de lista desepenha melhor quando o número de elementos já é conhecido no momento da alocação.
+
+- **Implementação de outras estruturas de dados:** É possível implementar, por exemplo, pilhas (LIFO) e filas (FIFO) usando listas lineares com alocação contígua. Nesse caso, o que diferenciará essas estruturas da lista linear serão as operações específicas que cada uma desempenha.
 
 ## Operações típicas
 

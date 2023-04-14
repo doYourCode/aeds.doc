@@ -68,18 +68,48 @@ melão
 {{< /tab >}}
 {{< /tabs >}}
 
+Ao realizar essa operação, o que ocorre é a leitura direta do conteúdo referenciado pelo índice 3, sem ter que percorrer a lista ou consultar dados em outros endereços de memória.
+```mermaid
+graph BT
+    subgraph frutas_preferidas
+        subgraph índice 0
+            maçã
+        end
+        subgraph índice 1
+            pêra
+        end
+        subgraph índice 2
+            abacaxi
+        end
+        subgraph índice 3
+            melão
+        end
+        subgraph índice 4
+            laranja
+        end
+        subgraph índice 5
+            manga
+        end
+        subgraph índice 6
+            mamão
+        end
+    end
+
+    style melão fill:#AA2222
+```
+
 - **Operações de busca e recuperação rápidas:** A busca e recuperação de elementos em uma lista linear são geralmente rápidas, como vimos anteriormente, especialmente quando se conhece a posição do elemento na lista. Caso a posição não seja conhecida, em listas de tamanho pequeno e médio pode-se realizar buscas lineares e em outros casos, pode-se também implementador algoritmos como a busca binária, desde que a lista esteja ordenada.
 
-Para melhor ilustrar, imagine que queiramos retornar o endereço do item "laranja", que não conhecemos. Nesse caso podemos utilizar a funções `index( )` ou `find( )`, ou até mesmo implementarmos uma busca nós mesmos.
+Para melhor ilustrar como fazer buscas lineares em listas com Python, imagine que queiramos retornar o endereço do item "laranja", que não conhecemos. Nesse caso podemos utilizar a funções `index( )` ou `find( )`, ou até mesmo implementarmos uma busca nós mesmos. Para mais informações sobre os diferentes tipos de algoritmos de buscas e suas características, leia a seção // TODO: seção de algo. de busca.
 
 {{< tabs "ex_0-2" >}}
 {{< tab "Python" >}}
 ```python{linenostart=6}
 # Escreve na tela o endereço do item "laranja" através das buscas embutidas de python e uma busca implementada pelo autor
+# index() retorna o índice pertencente ao item buscado
 print(frutas_preferidas.index("laranja")
-
+# find() faz a mesma coisa, porém retorna um índice -1 caso não encontre o item
 print(frutas_preferidas.find("laranja")
-
 # Esse último método é mais flexível pois permite realizar buscas em objetos mais complexos, podendo utilizar seus campos como parâmetro de busca
 for i in range(len(frutas_preferidas)):
   if frutas_preferidas[i] == "laranja":

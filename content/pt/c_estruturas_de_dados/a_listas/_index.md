@@ -9,7 +9,7 @@ Listas são estruturas de dados que permitem armazenar uma coleção de elemento
 Nosso repositório conta com a implementação de algumas dessas listas, para mais informações:
 
 - [Lista linear contígua](/c_estruturas_de_dados/a_listas/a_lista_linear_contigua/)
-- [Lista linear contígua]( {{< relref "/c_estruturas_de_dados/a_listas/a_lista_linear_contigua/" >}})
+- [Lista linear contígua]( {{< relref "/c_estruturas_de_dados/a_listas/a_lista_linear_contigua.md" >}})
 - Lista encadeada
 - Lista duplamente encadeada
 - Lista circular

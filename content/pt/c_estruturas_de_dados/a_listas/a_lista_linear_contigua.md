@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: "Lista linear (alocação contígua)"
+title: "Lista linear contígua"
 date: 2023-04-12T01:00:36-03:00
 draft: false
 ---
@@ -10,7 +10,7 @@ draft: false
 <h2> Conteúdo </h2>
 {{< toc "format=html" >}}
 
-A lista linear é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (ou seja, uma alocação contígua, como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
+A lista linear de alocação contígua é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (ou seja, exatamente como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
 
 Para exemplificar, imaginemos a seguinte situação, uma lista com as sete (7) frutas preferidas de alguém, nessa lista estão presentes maçã, pêra, abacaxi, melão, laranja, manga e mamão. Em python, para criar uma lista como essa, executamos o comando a seguir:
 

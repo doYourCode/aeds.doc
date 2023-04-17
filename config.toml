@@ -1,6 +1,6 @@
 
-baseURL = "https://doyourcode.github.io/aeds.doc"
-#baseURL = "//localhost"
+#baseURL = "https://doyourcode.github.io/aeds.doc"
+baseURL = "//localhost"
 
 title = "Algoritmos e Estruturas de Dados"
 theme = "hugo-geekdoc"

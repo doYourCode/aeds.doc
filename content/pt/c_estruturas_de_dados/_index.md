@@ -12,3 +12,10 @@ O estudo de estruturas de dados, um componente fundamental da educação em ciê
 - Pilhas
 - Grafos e Árvores
 - Tabela Hash
+***
+
+## Complexidade assintótica das estruturas de dados
+
+A tabela abaixo resume a complexidade de tempo de operações e de uso de memória para as principais estruturas de dados. Para obter mais detalhes sobre esse assunto, leia a seção [Complexidade Assintótica]( {{< relref "" >}}).
+
+{{< include file="/_includes/tabela_complexidade.html" type="html" >}}

@@ -10,7 +10,7 @@ draft: false
 <h2> Conteúdo </h2>
 {{< toc "format=html" >}}
 
-A lista linear de alocação contígua é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (ou seja, exatamente como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes.
+A lista linear de alocação contígua é uma estrutura de dados que consiste em uma sequência de elementos armazenados em locais adjacentes na memória (ou seja, exatamente como em um array). Essa estrutura permite não apenas o acesso sequencial aos elementos, como também o acesso direto por meio de seus endereços de memória, o que torna a busca e a recuperação de elementos eficientes. A principal diferença entre uma lista linear de alocação contígua e um array está na alocação de memória, flexibilidade de tamanho e complexidade das operações de inserção e remoção de elementos. Enquanto uma lista linear de alocação contígua oferece maior flexibilidade em relação ao tamanho da lista, a alocação dinâmica de memória e a complexidade das operações podem ter um impacto no desempenho em comparação a um array.
 
 Para exemplificar, imaginemos a seguinte situação, uma lista com as sete (7) frutas preferidas de alguém, nessa lista estão presentes maçã, pêra, abacaxi, melão, laranja, manga e mamão. Em python, para criar uma lista como essa, executamos o comando a seguir:
 
@@ -122,7 +122,9 @@ for i in range(len(frutas_preferidas)):
 {{< /tab >}}
 {{< /tabs >}}
 
-- **Implementação eficiente de pilhas e filas:** Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido. Nas seções dessas estruturas de dados veremos sua implementação valendo-se da lista padrão do Python.
+- **Implementação de pilhas e filas:** Em certos casos, a implementação de pilhas e filas usando listas lineares é eficiente, pois permite a inserção e remoção de elementos em tempo constante, O(1), sem a necessidade de realocação de memória sempre que o número máximo de elementos for conhecido. Nas seções dessas estruturas de dados veremos sua implementação valendo-se da lista padrão do Python.
+
+- **Tamanho dinâmico da lista:** Em uma lista linear de alocação contígua, o tamanho da lista pode ser alterado dinamicamente durante a execução do programa, ou seja, a lista pode crescer ou encolher conforme necessário. Já em um array, o tamanho é fixo e determinado em tempo de compilação ou em tempo de execução, e não pode ser alterado posteriormente.
 
 ## Desvantagens
 
@@ -130,7 +132,7 @@ for i in range(len(frutas_preferidas)):
 
 - **Inserção e remoção ineficientes:** A inserção e remoção de elementos em uma lista linear podem ser ineficientes em termos de tempo, especialmente quando é necessário inserir ou remover elementos no meio da lista. Isso pode exigir o deslocamento de elementos subsequentes, resultando em tempo de execução proporcional ao tamanho da lista, O(n).
 
-- **Desperdício de memória:** Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar em uso ineficiente da memória.
+- **Menor eficiência de memória:** Se a lista linear não for totalmente preenchida, pode-se dizer que há desperdício de memória, pois os locais de memória não utilizados permanecem reservados, o que pode resultar, comparativamente, em uso mais ineficiente da memória. Além disso, Uma lista linear de alocação contígua pode usar mais recursos de memória em comparação a um array, uma vez que pode precisar de realocações de memória durante a inserção ou remoção de elementos.
 
 ## Usos comuns
 
@@ -262,13 +264,13 @@ Em resumo, as listas são estruturas de dados versáteis e poderosas em Python, 
 
 ## Referências
 
-#### Geral
+**Geral**
 
 - <a href="https://duckduckgo.com/?q=Estruturas+de+dados+e+algoritmos+em+C%2B%2B+DROZDEK%2C+Adam" target="_blank">(Livro) Estruturas de dados e algoritmos em C++</a>
 - <a href="https://duckduckgo.com/?q=Estruturas+de+dados%3A+algoritmos%2C+an%C3%A1lise+da+complexidade+e+implementa%C3%A7%C3%B5es+em+Java+e+C%2FC%2B%2B&ia=web" target="_blank">(Livro) Estruturas de dados: algoritmos, análise da complexidade e implementações em Java e C/C++</a>
 - <a href="https://duckduckgo.com/?q=Introduction+to+Algorithms" target="_blank">(Livro) Introduction to Algorithms</a>
 
-#### Python
+**Python**
 
 - <a href="https://blog.betrybe.com/python/python-list/" target="_blank">Betrybe - Python list: armazenando itens em uma única variável!</a>
 - <a href="https://www.devmedia.com.br/como-trabalhar-com-listas-em-python/37460" target="_blank">Devmedia - Como trabalhar com listas em Python</a>

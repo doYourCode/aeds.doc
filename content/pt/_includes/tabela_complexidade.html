@@ -1,0 +1,141 @@
+<style type="text/css">
+
+  table { table-layout: fixed; text-align: center; font-size: smaller; }
+  .cell-bold { font-weight: bolder; }
+  .cell-green { background: rgba(0, 160, 0, .3); }
+  .cell-greenish { background: rgba(80, 160, 0, 0.3); }
+  .cell-yellow { background: rgba(160, 160, 0, 0.3); }
+  .cell-n-a { background: rgba(128, 128, 128, .3); }
+  .footnotes { font-size: xx-small; }
+
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th class="cell-bold" rowspan="3">Estrutura<br>de dados</th>
+      <th class="cell-bold" colspan="8">Complexidade de tempo</th>
+      <th class="cell-bold">Complexidade<br>espacial</th>
+    </tr>
+    <tr>
+      <th class="cell-bold" colspan="4">Caso médio</th>
+      <th class="cell-bold" colspan="4">Pior caso</th>
+      <th class="cell-bold">Pior caso</th>
+    </tr>
+    <tr>
+      <th class="cell-bold">Acesso</th>
+      <th class="cell-bold">Busca</th>
+      <th class="cell-bold">Inserção</th>
+      <th class="cell-bold">Remoção</th>
+      <th class="cell-bold">Acesso</th>
+      <th class="cell-bold">Busca</th>
+      <th class="cell-bold">Inserção</th>
+      <th class="cell-bold">Remoção</th>
+      <th class="cell-bold"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Array</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Lista</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Fila</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Pilha</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-yellow">Θ(n)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-green">O(1)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Árvore BST¹</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Árvore AVL²</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Árvore B³</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">Θ(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-greenish">O(log(n))</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+    <tr>
+      <td>Tabela hash</td>
+      <td class="cell-n-a">N/A</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-green">Θ(1)</td>
+      <td class="cell-n-a">N/A</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+      <td class="cell-yellow">O(n)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footnotes">
+¹ Árvore Binária de Busca (BST - Binary Search Tree). </br>
+² Árvore do tipo balanceada (AVL - Adelson-Velsky and Landis). </br>
+³ Generalização da árvore BST.
+</div>

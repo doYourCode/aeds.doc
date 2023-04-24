@@ -50,8 +50,9 @@ Pretendemos incluir os seguintes conteúdos:
 
 ## Principais contribuidores do projeto
 
-- [Franck Allyson](https://github.com/franckallyson)
-- [Everton Sousa Oliveira](https://github.com/Evertonsousa3)
+- <a href="https://github.com/doyourcode" target="_blank">Caio Lamas</a>
+- <a href="https://github.com/franckallyson" target="_blank">Franck Allyson</a>
+- <a href="https://github.com/evertonsousa3" target="_blank">Everton Sousa Oliveira</a>
 
 ## Contribuições, comentários e sugestões
 

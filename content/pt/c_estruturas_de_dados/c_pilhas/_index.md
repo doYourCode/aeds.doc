@@ -3,20 +3,11 @@ weight: 3
 title: "Pilhas"
 date: 2023-04-12T01:00:36-03:00
 draft: true
----
-
-//TODO
-
----
-weight: 3
-title: "Pilhas"
-date: 2023-04-12T01:00:36-03:00
-draft: true
 __author__ = ["Wender Alves da Silva", "Jefferson Eduardo Santos Lima", "Marina Jessiara Araújo Fonseca"] __date__ = "27/05/2023" "was8@aluno.ifnmg.edu.br","jesl@aluno.ifnmg.edu.br","mjaf@aluno.ifnmg.edu.br".
 __credits__ = ["https://algoritmosempython.com.br/cursos/algoritmos-python/estruturas-dados/pilhas/"]
 ---
 
-//Pilha em Python
+Pilha em Python
 
 A pilha é uma estrutura de dados sequencial que nos permite recuperar os dados na ordem inversa à que foram inseridos. Esta restrição sobre a entrada e saída de dados na estrutura é conhecida como política de acesso e, no caso da pilha, leva o nome LIFO (Last In, First Out) traduzindo, “Último a Entrar, Primeiro a Sair.”
 
@@ -51,18 +42,18 @@ Como pilhas só precisam de métodos para adicionar e remover itens do seu topo,
 Porém, ou você só usa esses dois métodos (inserir e desempilhar), ou você cria sua própria estrutura de dados chamada de Pilha. Segue o exemplo:
 
 
-# Para Type annotation
+Para Type annotation
 from typing import List
 
-# Pilha de livros com type annotation
+Pilha de livros com type annotation
 pilha_de_livros: List[str] = [ ]  # {1}
 
-# Adicionando livros no topo da pilha
+Adicionando livros no topo da pilha
 pilha_de_livros.inserir('Livro 1')  # {2}
 pilha_de_livros.inserir('Livro 2')  # {2}
 pilha_de_livros.inserir('Livro 3')  # {2}
 
-# Obtendo o elemento mais novo
+Obtendo o elemento mais novo
 livro = pilha_de_livros.desempilhar()  # {3}
 print(livro)  # Livro 3 {4}
 

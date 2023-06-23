@@ -15,7 +15,7 @@ disablePathToLower = true
 customCSS = "/style.css"
 
 # Required if you want to render robots.txt template
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 defaultContentLanguage = "pt"
 
